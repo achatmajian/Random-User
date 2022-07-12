@@ -9,7 +9,6 @@ const app = Vue.createApp({
             gender: 'male',
             city: 'Birmingham',
             country: 'United Kingdom',
-            // flagCode: 'GB',
             flag: '🇬🇧',
             picture: 'ozzy.jpg'
         }
@@ -22,8 +21,6 @@ const app = Vue.createApp({
             let flagEmoji = countryFlagEmoji.get(results[0].nat);
 
             console.log(results);
-            // console.log(results[0].nat);
-            // console.log(countryFlagEmoji.get(results[0].nat));
             console.log(flagEmoji.emoji)
 
             this.firstName = results[0].name.first
@@ -35,10 +32,8 @@ const app = Vue.createApp({
             this.city = results[0].location.city
             this.country = results[0].location.country
             this.picture = results[0].picture.large
-            // this.flagCode = results[0].nat
             this.flag = flagEmoji.emoji
 
-            // console.log(countryFlagEmoji.get("flagCode"));
         }
     }
 })
